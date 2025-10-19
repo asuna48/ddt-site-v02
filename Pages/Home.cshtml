@@ -1,0 +1,52 @@
+@page
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Authorization
+@using ddt_site_v02.Data
+@attribute [Authorize]
+@inject UserManager<IdentityUser> UserManager
+@inject ApplicationDbContext Db
+@{
+    Layout = null;
+    var userName = User.Identity?.Name ?? "";
+    var servers = Db.ServerInfos.ToList();
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/modern-theme.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <p>Hoşgeldin <span class="username">@userName</span>!</p>
+        </div>
+        <div class="content">
+            <div class="welcome-message">
+                <h2>Macera seni bekliyor!</h2>
+                <div class="username">@userName</div>
+            </div>
+            <div class="server-section">
+                <h3>Sunucu Seç</h3>
+                <div class="servers">
+                    @foreach (var s in servers)
+                    {
+                        var idToShow = s.ServerID != 0 ? s.ServerID : s.Id;
+                        <a class="server-btn" asp-page="/Play" asp-route-serverId="@idToShow">
+                            <div class="server-label">@s.ServerID</div>
+                            <div class="server-name">@s.ServerName</div>
+                        </a>
+                    }
+                </div>
+            </div>
+            <form method="post" asp-area="Identity" asp-page="/Account/Logout" class="d-inline">
+                <button type="submit" class="btn btn-secondary">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

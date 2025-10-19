@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    background: rgba(30, 30, 50, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(94, 53, 177, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    background: linear-gradient(135deg, #5e35b1 0%, #7e57c2 100%);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.content {
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b39ddb;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(20, 20, 35, 0.6);
+    font-size: 15px;
+    border: 2px solid rgba(94, 53, 177, 0.3);
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Ensure checkbox inputs inside .form-check don't inherit the full-width text input styles */
+.form-group .form-check .form-check-input,
+.form-group .form-check input[type="checkbox"] {
+    width: auto; /* don't stretch */
+    padding: 0; /* remove text-input padding */
+    margin-right: 10px; /* spacing between checkbox and label */
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: 2px solid rgba(94, 53, 177, 0.3);
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+/* Checkbox checked state */
+.form-group .form-check .form-check-input:checked {
+    background: linear-gradient(135deg, #5e35b1 0%, #7e57c2 100%);
+    border-color: #7e57c2;
+}
+
+/* add a custom tick mark for browsers that support it */
+.form-group .form-check .form-check-input:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #7e57c2;
+    background: rgba(20, 20, 35, 0.8);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #5e35b1 0%, #7e57c2 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(94, 53, 177, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(94, 53, 177, 0.6);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #424242 0%, #616161 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 75px;
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.link {
+    min-width: 120px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #9575cd;
+}
+
+.link a {
+    color: #b39ddb;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.link a:hover {
+    color: #ce93d8;
+    text-decoration: underline;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(20, 20, 35, 0.4);
+    border-radius: 12px;
+    border: 2px solid rgba(94, 53, 177, 0.2);
+}
+
+.welcome-message h2 {
+    color: #b39ddb;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    color: #b39ddb;
+    font-size: 14px;
+}
+
+.button-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-play {
+    width: auto;
+    display: inline-block;
+    padding: 14px 28px;
+}
+
+.server-section {
+    margin-top: 20px;
+}
+
+.servers {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.server-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(20,20,35,0.6);
+    border: 2px solid rgba(94,53,177,0.3);
+    border-radius: 10px;
+    color: #e0e0e0;
+    text-decoration: none;
+    min-width: 140px;
+}
+
+.server-label {
+    background: linear-gradient(135deg, #5e35b1 0%, #7e57c2 100%);
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.server-name { font-weight: 600; color: #b39ddb; }

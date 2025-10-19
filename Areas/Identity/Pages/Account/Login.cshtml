@@ -1,0 +1,49 @@
+@page
+@model ddt_site_v02.Areas.Identity.Pages.Account.LoginModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/modern-theme.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Giriş Yap</h1>
+            <p>Hesabınla giriş yap ve maceraya başla!</p>
+        </div>
+        <div class="content">
+            <form method="post">
+                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.UserName">Kullanıcı Adı</label>
+                    <input asp-for="Input.UserName" class="form-control" />
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password">Şifre</label>
+                    <input asp-for="Input.Password" class="form-control" type="password" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input asp-for="Input.RememberMe" class="form-check-input" />
+                        <label asp-for="Input.RememberMe" class="form-check-label">Beni Hatırla</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Giriş Yap</button>
+            </form>
+            <div class="link">
+                Hesabın yok mu? <a asp-page="./Register">Kayıt ol</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

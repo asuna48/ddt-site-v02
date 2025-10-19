@@ -1,0 +1,44 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build outputs
+bin/
+obj/
+
+# Rider
+.idea/
+
+# dotnet publish
+publish/
+
+# User secrets
+secrets.json
+
+# EF Migrations
+Migrations/
+
+# Files built by the IDE
+*.db
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+.nuget/
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# IIS
+*.vspscc
+
+# Others
+*.userosscache
+*.sln.docstates

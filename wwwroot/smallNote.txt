@@ -1,0 +1,5 @@
+Oyun ekranı çok güzel... Ekran dolumu hızlı...
+BomBomTank güney gösterim 1: Bomba arkadaşlarda seviye 25 olduktan sonra çiftlik hayvanları toplamaya başlar.
+BomBomTank güney gösterim 2: Ekipman güçlendirimi için yalnızca güçlendirme tecrübesi toplamak gereklidir, %100 başarı!
+BomBomTank güney gösterim 3: “↑↓” yön tuşları ile fırlatma açısını ayarlayın. Gerçekçi olarak ayarlanmış fırlatma açısı, zafer için anahtardır.
+BomBomTank güney gösterim 4: “↑↓” yön tuşları ile fırlatma hareketini ayarlayın. Kendinize en faydalı noktayı bulun, zafer kapınıza gelsin

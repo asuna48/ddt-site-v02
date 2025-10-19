@@ -1,0 +1,52 @@
+@page
+@model ddt_site_v02.Areas.Identity.Pages.Account.RegisterModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/modern-theme.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kayıt Ol</h1>
+            <p>Hemen ücretsiz hesap oluştur!</p>
+        </div>
+        <div class="content">
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.UserName">Kullanıcı Adı</label>
+                    <input asp-for="Input.UserName" class="form-control" />
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Email">E-posta</label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password">Şifre</label>
+                    <input asp-for="Input.Password" class="form-control" type="password" minlength="4" title="Şifre en az 4 karakter olmalıdır." />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.ConfirmPassword">Şifre (Tekrar)</label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control" type="password" minlength="4" title="Lütfen şifreyi tekrar giriniz." />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn">Kayıt Ol</button>
+            </form>
+            <div class="link">
+                Zaten hesabın var mı? <a asp-page="./Login">Giriş yap</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
