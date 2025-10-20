@@ -110,4 +110,4 @@ dotnet run
 
 ---
 
-Bu README'yi repo köküne ekledim. Eğer istersen README'yi özelleştirebilirim (örneğin ekran görüntüleri, daha ayrıntılı migration adımları, ya da bir `seed` script ekleme). Hangi eklemeleri istersin?
+Bu README'yi repo köküne ekledim. Umarım sizlere yardımı dokunur.
